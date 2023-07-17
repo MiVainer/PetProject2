@@ -1,0 +1,30 @@
+<!--Здесь находится шаблон для остальных страниц-->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app1/css/app1.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+<body>
+    <!--боковая панель -->
+    <aside>
+        <img src="{%static 'app1/img/nginx.jpg' %}" alt="Картинка">
+        <span class="logo">MiVainer Logos</span>
+        <h3>Навигация</h3>
+        <ul>
+           <a href="/"><li><i class="bi bi-app"></i>Главная</li></a>
+            <a href="about"><li><i class="bi bi-airplane"></i>Про нас</li></a>
+            <li><i class="bi bi-apple"></i>Контакты</li>
+        </ul>
+    </aside>
+    <main>
+    {% block content1 %}
+    {% endblock %}
+    </main>
+</body>
+</html>
