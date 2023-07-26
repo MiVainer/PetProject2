@@ -1,0 +1,18 @@
+{% extends 'app1/layout.html' %}
+
+{% block title %}
+Удаление навыка
+{% endblock %}
+
+
+{% block content1 %}
+    <div class="features">
+        <h1>Удаление навыка</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-success" type="submit">Удалить навык</button>
+        </form>
+
+    </div>
+
+{% endblock %}

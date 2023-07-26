@@ -1,0 +1,22 @@
+{% extends 'app1/layout.html' %}
+
+{% block title %}
+Форма по добавлению навыков
+{% endblock %}
+
+
+{% block content1 %}
+    <div class="features">
+        <h1>Форма по добавлению моих навыков</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.skill }}<br>
+            {{ form.opisanie }}<br>
+            {{ form.full_text }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить навык</button>
+        </form>
+
+    </div>
+
+{% endblock %}

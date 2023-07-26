@@ -13,13 +13,15 @@
 <body>
     <!--боковая панель -->
     <aside>
-        <img src="{%static 'app1/img/nginx.jpg' %}" alt="Картинка">
-        <span class="logo">MiVainer Logos</span>
+        <img src="{%static 'app1/img/logo.webp' %}" alt="Картинка">
+        <span class="logo">MiVainer</span>
         <h3>Навигация</h3>
         <ul>
-           <a href="/"><li><i class="bi bi-app"></i>Главная</li></a>
-            <a href="about"><li><i class="bi bi-airplane"></i>Про нас</li></a>
-            <li><i class="bi bi-apple"></i>Контакты</li>
+            <a href="{% url 'home' %}"><li><i class="bi bi-bank"></i> Главная</li></a>
+            <a href="{% url 'about' %}"><li><i class="bi bi-buildings"></i> Про меня</li></a>
+            <a href="{% url 'contacts' %}"><li><i class="bi bi-apple"></i> Мои Контакты</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="bi bi-chat-left-text"></i> Навыки DevOps</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i></button> Добавить навыки</li></a>
         </ul>
     </aside>
     <main>

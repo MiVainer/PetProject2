@@ -1,0 +1,27 @@
+{% extends 'app1/layout.html' %}
+
+{% block title %}
+Skills for DevOps
+{% endblock %}
+
+
+{% block content1 %}
+    <div class="features">
+        <h1>Skills for DevOps</h1>
+        {% if skills %}
+
+            {% for skill in skills %}
+                <div class="alert alert-warning">
+                    <h3>{{ skill.skill }}</h3>
+                    <p>{{ skill.opisanie }}</p>
+                    <p>{{ skill.full_text }}</p>
+                    <a href="{% url 'news-detail' skill.id %}" class="btn btn-warning">Полное описание</a>
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <p>У вас нет записей!</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

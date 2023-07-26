@@ -1,0 +1,17 @@
+{% extends 'app1/layout.html' %}
+
+{% block title %}
+{{ article.skill }}
+{% endblock %}
+
+
+{% block content1 %}
+    <div class="features">
+        <h1>{{ article.skill }}</h1>
+        <p>{{ article.opisanie }}</p>
+        <p>{{ article.full_text }}</p>
+        <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Удалить</a>
+        <a href="{% url 'news-update' article.id %}" class="btn btn-info">Редактировать</a>
+    </div>
+
+{% endblock %}
